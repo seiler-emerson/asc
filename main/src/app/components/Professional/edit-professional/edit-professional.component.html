@@ -1,0 +1,255 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModalProfessional">
+    Edit personal info
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="editModalProfessional" tabindex="-1" aria-labelledby="editModalProfessional" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="editModalProfessional">Edit </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <div class="card-body">
+                <form [formGroup]="form" class="row g-3" (ngSubmit)="register()">
+                    <div class="col-md-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" formControlName="name" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('name') }" />
+                        <div class="invalid-feedback" *ngIf="hasError('name') && hasError('name')?.['required']">
+                            Field is required
+                        </div>
+                        <div class="invalid-feedback" *ngIf="hasError('name') && hasError('name')?.['minlength']">
+                            Field must be at least 3 characters long.
+                        </div>
+                        <div class="invalid-feedback" *ngIf="hasError('name') && hasError('name')?.['maxlength']">
+                            Field must have a maximum of 20 characters.
+                        </div>
+                    </div>
+        
+                    <div class="col-md-3">
+                        <label for="last-name" class="form-label"> Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('lastName') }" />
+                        <div class="invalid-feedback" *ngIf="hasError('lastName') && hasError('lastName')?.['required']">
+                            Field is required
+                        </div>
+                        <div class="invalid-feedback" *ngIf="hasError('lastName') && hasError('lastName')?.['minlength']">
+                            Field must be at least 3 characters long.
+                        </div>
+                        <div class="invalid-feedback" *ngIf="hasError('lastName') && hasError('lastName')?.['maxlength']">
+                            Field must have a maximum of 20 characters.
+                        </div>
+                    </div>
+        
+                    <div class="col-md-3">
+                        <label for="cpf" class="form-label">CPF</label>
+                        <input type="text" formControlName="cpf" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('cpf') }" />
+                        <div class="invalid-feedback" *ngIf="hasError('cpf') && hasError('cpf')?.['required']">
+                            Field is required
+                        </div>
+                        <div class="invalid-feedback" *ngIf="hasError('cpf') && hasError('cpf')?.['pattern']">
+                            Invalid CPF.
+                        </div>
+                    </div>
+        
+                    <div class="col-md-3">
+                        <label for="birthdate" class="form-label">Birthdate</label>
+                        <input type="date" formControlName="birthdate" class="form-control"
+                            [ngClass]="{'is-invalid': submitted && hasError('appointmentDate')}" />
+                        <div class="invalid-feedback"
+                            *ngIf="hasError('appointmentDate') && hasError('appointmentDate')?.['required']">
+                            Field is required
+                        </div>
+                        <div class="invalid-feedback"
+                            *ngIf="hasError('appointmentDate') && hasError('appointmentDate')?.['pattern']">
+                            Invalid date!
+                        </div>
+                    </div>
+        
+                    <div class="col-md-3">
+                        <label for="name" class="form-label"> Mother name</label>
+                        <input type="text" formControlName="motherName" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('motherName') }" />
+                        <div class="invalid-feedback"
+                            *ngIf="hasError('motherName') && hasError('motherName')?.['required']">
+                            Field is required
+                        </div>
+                        <div class="invalid-feedback"
+                            *ngIf="hasError('motherName') && hasError('motherName')?.['minlength']">
+                            Field must be at least 3 characters long.
+                        </div>
+                        <div class="invalid-feedback"
+                            *ngIf="hasError('motherName') && hasError('motherName')?.['maxlength']">
+                            Field must have a maximum of 20 characters.
+                        </div>
+                    </div>
+        
+                    <div class="col-md-3">
+                        <label for="name" class="form-label"> Father name</label>
+                        <input type="text" formControlName="fatherName" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('fatherName') }" />
+                        <div class="invalid-feedback"
+                            *ngIf="hasError('fatherName') && hasError('fatherName')?.['required']">
+                            Field is required
+                        </div>
+                        <div class="invalid-feedback"
+                            *ngIf="hasError('fatherName') && hasError('fatherName')?.['minlength']">
+                            Field must be at least 3 characters long.
+                        </div>
+                        <div class="invalid-feedback"
+                            *ngIf="hasError('fatherName') && hasError('fatherName')?.['maxlength']">
+                            Field must have a maximum of 20 characters.
+                        </div>
+                    </div>
+        
+                    <div class="col-md-3">
+                        <label for="phone-number" class="form-label">Phone Number</label>
+                        <input type="text" formControlName="phoneNumber" class="form-control"
+                            [ngClass]="{'is-invalid': submitted && hasError('phoneNumber')}" />
+                        <div class="invalid-feedback"
+                            *ngIf="hasError('phoneNumber') && hasError('phoneNumber')?.['required']">
+                            Field is required
+                        </div>
+                        <div class="invalid-feedback"
+                            *ngIf="hasError('phoneNumber') && hasError('phoneNumber')?.['pattern']">
+                            Invalid phone number!
+                        </div>
+                    </div>
+        
+                    <div class="col-md-3">
+                        <label for="crm" class="form-label">CRM
+                        </label>
+                        <input type="text" formControlName="crm" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('crm') }" />
+                        <div class="invalid-feedback"
+                            *ngIf="hasError('crm') && hasError('crm')?.['required']">
+                            Field is required
+                        </div>
+                    </div>
+        
+                    <div class="col-md-2">
+                        <label for="inputState" class="form-label">Sex</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+        
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" formControlName="email" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('email') }" />
+                        <div class="invalid-feedback" *ngIf="hasError('email')">Field is required</div>
+                    </div>
+                     <div class="col-md-2">
+                        <label for="cpf" class="form-label">Street
+                        </label>
+                        <input type="text" formControlName="street" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('street') }" />
+                        <div class="invalid-feedback" *ngIf="hasError('street') && hasError('street')?.['required']">
+                            Field is required
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <label for="cpf" class="form-label">Number
+                        </label>
+                        <input type="text" formControlName="numberAddress" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('numberAddress') }" />
+                        <div class="invalid-feedback"
+                            *ngIf="hasError('numberAddress') && hasError('numberAddress')?.['required']">
+                            Field is required
+                        </div>
+                    </div>
+        
+                    <div class="col-md">
+                        <label for="cpf" class="form-label">City
+                        </label>
+                        <input type="text" formControlName="city" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('city') }" />
+                        <div class="invalid-feedback" *ngIf="hasError('city') && hasError('city')?.['required']">
+                            Field is required
+                        </div>
+                    </div>
+        
+                    <div class="col-md-2">
+                        <label for="zipcode" class="form-label">Zipcode
+                        </label>
+                        <input type="text" formControlName="zipcode" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('zipcode') }" />
+                        <div class="invalid-feedback" *ngIf="hasError('zipcode') && hasError('zipcode')?.['required']">
+                            Field is required
+                        </div>
+                    </div>
+        
+                    <div class="col-md-1">
+                        <label for="cpf" class="form-label">State
+                        </label>
+                        <input type="text" formControlName="state" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('state') }" />
+                        <div class="invalid-feedback" *ngIf="hasError('state') && hasError('state')?.['required']">
+                            Field is required
+                        </div>
+                    </div>
+        
+                    <div class="col-md-2">
+                        <label for="cpf" class="form-label">Country
+                        </label>
+                        <input type="text" formControlName="country" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('country') }" />
+                        <div class="invalid-feedback" *ngIf="hasError('country') && hasError('country')?.['required']">
+                            Field is required
+                        </div>
+                    </div>
+        
+                    <div class="col-md-3">
+                        <label for="specialty" class="form-label">Specialty
+                        </label>
+                        <input type="text" formControlName="specialty" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('specialty') }" />
+                        <div class="invalid-feedback" *ngIf="hasError('specialty') && hasError('specialty')?.['required']">
+                            Field is required
+                        </div>
+                    </div>
+        
+                    <div class="col-md-2">
+                        <label for="initialShift" class="form-label">Initial Shift
+                        </label>
+                        <input type="time" formControlName="initialShift" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('initialShift') }" />
+                        <div class="invalid-feedback" *ngIf="hasError('initialShift') && hasError('initialShift')?.['required']">
+                            Field is required
+                        </div>
+                    </div>
+        
+        
+                    <div class="col-md-2">
+                        <label for="finalShift" class="form-label">Final Shift
+                        </label>
+                        <input type="time" formControlName="finalShift" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && hasError('finalShift') }" />
+                        <div class="invalid-feedback" *ngIf="hasError('finalShift') && hasError('finalShift')?.['required']">
+                            Field is required
+                        </div>
+                    </div>
+        
+        
+                    <div class="form-footer">
+                        <div class="d-flex justify-content-center mt-3 login_container">
+                            <button type="submit" class="btn btn-primary" (click)="register()">Register</button>
+                        </div>
+                    </div>
+                </form>
+            </div> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

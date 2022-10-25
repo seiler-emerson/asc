@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "505a895c-8961-43c9-aad7-2875234e8d4e",
+		"name": "ASC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23249928"
+	},
+	"item": [
+		{
+			"name": "Medical",
+			"item": [
+				{
+					"name": "PUT medical",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dr.Potat\",\r\n    \"sex\": \"M\",\r\n    \"email\": \"dr.estrnho@yahoo.com\",\r\n    \"phone\": \"48998475279\",\r\n    \"city\": \"blumenau\",\r\n    \"state\": \"Santa catarina\",\r\n    \"zipCode\":\"4568415\",\r\n    \"username\":\"dasda\",\r\n    \"password\":\"batata\",\r\n    \"numberStreet\":\"dasdada\",\r\n    \"specialty\":\"dasdas\",\r\n    \"street\":\"dasda\",\r\n    \"cpf\":\"794.021.730-56\"\r\n}"
+						},
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE medical",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/medicals",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"medicals"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET medical",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/medicals",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"medicals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST medicals",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Kirk Hemmet\",\r\n    \"sex\": \"M\",\r\n    \"email\": \"dr.estrnho@yahoo.com\",\r\n    \"phone\": \"48998475279\",\r\n    \"city\": \"blumenau\",\r\n    \"state\": \"Santa catarina\",\r\n    \"zipCode\":\"4568415\",\r\n    \"username\":\"dasda\",\r\n    \"password\":\"batata\",\r\n    \"numberStreet\":\"dasdada\",\r\n    \"specialty\":\"dasdas\",\r\n    \"street\":\"dasda\",\r\n    \"cpf\":\"997.979.700-27\"\r\n}"
+						},
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/medicals",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"medicals"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "POST admin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ariana1\",\r\n   \"username\":\"admin2\",\r\n   \"password\": \"admin\"\r\n}"
+						},
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/admins",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET admin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/admins",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT admin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"isto é um teste\",\r\n    \"username\": \"capaz\",\r\n    \"password\": \"segredo\"\r\n}"
+						},
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/admins",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/admins",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admins"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Scheduling",
+			"item": [
+				{
+					"name": "GET Scheduling",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/scheduling",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"scheduling"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Scheduling",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"dateClosed\": null,\r\n        \"description\": \"pizza de lombo\",\r\n        \"priority\": 1,\r\n        \"status\": 1,\r\n        \"medical\": 14,\r\n        \"patient\": 4\r\n    }"
+						},
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/scheduling",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"scheduling"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Scheduling",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"dateClosed\": null,\r\n        \"description\": \"batatinha frita\",\r\n        \"priority\": 1,\r\n        \"status\": 0,\r\n        \"medical\": 4,\r\n        \"patient\": 24\r\n    }"
+						},
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/scheduling/1",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"scheduling",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Scheduling",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/scheduling/1",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"scheduling",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "GET Patient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/patients",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Patient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Mary\",\r\n    \"sex\": \"M\",\r\n    \"email\": \"dr.estrnho@yahoo.com\",\r\n    \"phone\": \"48998475279\",\r\n    \"city\": \"blumenau\",\r\n    \"state\": \"Santa catarina\",\r\n    \"zipCode\":\"4568415\",\r\n    \"username\":\"dasda\",\r\n    \"password\":\"batata\",\r\n    \"numberStreet\":\"dasdada\",\r\n    \"symptoms\":\"dor\",\r\n    \"street\":\"dasda\",\r\n    \"cpf\":\"525.992.000-75\"\r\n}"
+						},
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/patients",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Team",
+			"item": [
+				{
+					"name": "GET team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/team",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"team"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT team",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 14,\r\n        \"image\": \"https://drive.google.com/file/d/1BCLrJDmmqtuA0MQVjEg2c0oHCBYGQkII/view\",\r\n        \"name\": \"Ariana Silva\",\r\n        \"github\": \"https://github.com/ariana-ssilva\",\r\n        \"linkedin\": \"https://www.linkedin.com/in/ariana-moreira-691a86217/\",\r\n        \"portfolio\": \"https://ariana-ssilva.github.io/\"\r\n    },"
+						},
+						"url": {
+							"raw": "https://aesculapius-scheduling-center.herokuapp.com/team/14",
+							"protocol": "https",
+							"host": [
+								"aesculapius-scheduling-center",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"team",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

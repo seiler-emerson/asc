@@ -1,0 +1,33 @@
+[{
+    "id": "1",
+    "name": "AAAA",
+    "favorite": "false",
+    "stars" : "4.5",
+    "specialty": "Neurosurgeon",
+    "imageUrl": "assets/professional/professional_2.jpg"
+  },
+  {
+    "id": "1",
+    "name": "AAAA",
+    "favorite": "false",
+    "stars" : "4.5",
+    "specialty": "Neurosurgeon",
+    "imageUrl": "assets/professional/professional_2.jpg"
+  },
+  {
+    "id": "1",
+    "name": "AAAA",
+    "favorite": "false",
+    "stars" : "4.5",
+    "specialty": "Neurosurgeon",
+    "imageUrl": "assets/professional/professional_2.jpg"
+  },
+  {
+    "id": "1",
+    "name": "AAAA",
+    "favorite": "false",
+    "stars" : "4.5",
+    "specialty": "Neurosurgeon",
+    "imageUrl": "assets/professional/professional_2.jpg"
+  }  
+]

@@ -1,0 +1,19 @@
+<section id="team">
+    <div class="container card-team text-center border-0">
+        <h2 class="text-center">Contact us</h2>
+        <div class="row row-col row-cols-md-3 g-40 border-0">
+            <div class="col border-0" *ngFor="let member of team">
+                <div class="text-center border-0"><img src="{{member.image}}" class="rounded-circle" alt="..."></div>
+
+                <div class="team-pic card-body text-center border-0">
+                    <h5 class="text-center border-0">{{member.name}}</h5>
+                    <div class="col-md-12 mb-4">
+                        <a href="{{member.github}}" class="btn"><span class="fa-brands fa-github"></span></a>
+                        <a href="{{member.linkedin}}" class="btn"><span class="fa-brands fa-linkedin-in"></span></a>
+                        <a href="{{member.portfolio}}" class="btn"><span class="fa-solid fa-globe"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

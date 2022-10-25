@@ -1,0 +1,15 @@
+p-carousel{
+    box-shadow: none !important;
+    }
+    .card-body {
+      padding: .5rem 1rem !important;
+    }
+    
+    .details {
+      align-content: space-between;
+    }
+
+    img{
+      max-height: 50px !important;
+      max-width:  80px !important;
+    }

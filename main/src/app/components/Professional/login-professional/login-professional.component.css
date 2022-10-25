@@ -1,0 +1,84 @@
+.sos{
+    position: fixed;
+}
+#login-doctor {
+    max-height: 100vh;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: auto;
+    background-position: fixed;
+}
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: var(--bs-gutter-y);
+    padding-right: 0;
+}
+
+.container {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none;
+    max-height: 1.130.340px;
+    min-height: 1.130.340px;
+    min-width: 100%;
+    margin-bottom: 0!important;
+}
+
+.login-form {
+    background-image: url(/assets/background/background_7.png);
+    max-height: 100vh;
+    min-height: 100vh;
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.brand_logo_container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.form-login{
+    margin-top: 0;
+}
+.brand_logo {
+    margin-top: 3rem;
+    height: 25vh;
+    border: 2px solid white;
+}
+
+.form_container {
+    font-size: .8em;
+}
+
+.btn {
+    width: 100%;
+    background: #4488bb !important;
+    color: white !important;
+    font-size: 1em;
+}
+
+.btn:hover {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.login_container {
+    padding: 0 2rem;
+}
+p {
+    margin-top: 1rem;
+    font-size: 0.8em;
+}
+
+.form-control.ng-touched.ng-invalid {
+    border: 1px solid red;
+}
+
+.form-control.ng-touched.ng-valid {
+    border: 1px solid green;
+}

@@ -1,0 +1,84 @@
+section {
+    margin-top: 5rem;
+}
+
+.ftco-section {
+    padding: 7em 0;
+}
+
+
+.heading-section {
+    font-size: 28px;
+    color: #fff;
+}
+
+.img {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: max-content;
+}
+
+.login-wrap {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1rem !important;
+}
+
+.login-wrap h3 {
+    font-weight: 300;
+    color: #fff;
+}
+
+.login-wrap .social {
+    width: 100%;
+}
+
+.login-wrap .social a {
+    width: 100%;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #000;
+    background: #fff;
+}
+
+.login-wrap .social a:hover {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.form-group {
+    position: relative;
+}
+
+.field-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.form-control {
+    background: transparent;
+    border: none;
+    height: 50px;
+    color: white !important;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}

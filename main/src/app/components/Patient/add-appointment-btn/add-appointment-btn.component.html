@@ -1,0 +1,119 @@
+<div class="center">
+  <button data-toggle="modal" data-target="#add-appointment" class="btn btn-primary center-block fixed-button wobble">
+    <i class="fa fa-plus"></i>
+  </button>
+</div>
+
+<div class="modal fade appointment-modal-modal" data-backdrop="static" id="add-appointment">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body appointment-modal-modal-body">
+        <h5 class="modal-title text-center">Add appointment</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+        </button>
+
+        <!-- appointment form -->
+        <form [formGroup]="form" class="row g-3" (ngSubmit)="onSubmit()">
+          <div class="col-md-6">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" formControlName="name" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && hasError('name') }" />
+            <div class="invalid-feedback" *ngIf="hasError('name') && hasError('name')?.['required']">
+              Field is required
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('name') && hasError('name')?.['minlength']">
+              Field must be at least 3 characters long.
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('name') && hasError('name')?.['maxlength']">
+              Field must have a maximum of 20 characters.
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="last-name" class="form-label">Name</label>
+            <input type="text" formControlName="lastName" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && hasError('lastName') }" />
+            <div class="invalid-feedback" *ngIf="hasError('lastName') && hasError('lastName')?.['required']">
+              Field is required
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('lastName') && hasError('lastName')?.['minlength']">
+              Field must be at least 3 characters long.
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('lastName') && hasError('lastName')?.['maxlength']">
+              Field must have a maximum of 20 characters.
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" formControlName="cpf" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && hasError('cpf') }" />
+            <div class="invalid-feedback" *ngIf="hasError('cpf') && hasError('cpf')?.['required']">
+              Field is required
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('cpf') && hasError('cpf')?.['pattern']">
+              Invalid CPF.
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="phone-number" class="form-label">Phone Number</label>
+            <input type="text" formControlName="phoneNumber" class="form-control"
+              [ngClass]="{'is-invalid': submitted && hasError('phoneNumber')}" />
+            <div class="invalid-feedback" *ngIf="hasError('phoneNumber') && hasError('phoneNumber')?.['required']">
+              Field is required
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('phoneNumber') && hasError('phoneNumber')?.['pattern']">
+              Invalid phone number!
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" formControlName="email" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && hasError('email') }" />
+            <div class="invalid-feedback" *ngIf="hasError('email')">Field is required</div>
+          </div>
+
+          <!-- ver validação de select -->
+          <div class="col-12">
+            <label for="professional-select" class="form-label">Choose a professional</label>
+            <select id="professional-select" class="form-select">
+              <option selected>Choose...</option>
+              <option>Stephen Strange</option>
+              <option>Gregory House</option>
+            </select>
+          </div>
+
+
+
+          <div class="col-md-6">
+            <label for="appointment-date" class="form-label">Appointment date</label>
+            <input type="date" formControlName="appointmentDate" class="form-control"
+              [ngClass]="{'is-invalid': submitted && hasError('appointmentDate')}" />
+            <div class="invalid-feedback"
+              *ngIf="hasError('appointmentDate') && hasError('appointmentDate')?.['required']">
+              Field is required
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="appointment-time" class="form-label">Time</label>
+            <input type="time" class="form-control" id="appointment-time" />
+          </div>
+
+          <div class="modal-footer">
+            <div class="d-flex justify-content-center mt-3 login_container">
+              <button type="submit" class="btn btn-primary" (click)="onSubmit()">Save</button>
+            </div>
+
+            <div class="d-flex justify-content-center mt-3 login_container">
+              <button type="submit" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.fixed-button {
+    background-color: #B8DEF2;
+    color: #345B70;
+    border: none;
+    outline: none;
+    position: fixed;
+    bottom: 0px;
+    right: 15px;
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    box-shadow: 1px 3px 5px #888888;
+  }
+
+
+  .form-control.ng-touched.ng-invalid {
+    border: 1px solid red;
+}
+
+.form-control.ng-touched.ng-valid {
+    border: 1px solid green;
+}
+  

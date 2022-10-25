@@ -1,0 +1,46 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editShift">
+    Edit shift
+</button>
+<div class="modal fade" id="editShift" tabindex="-1" aria-labelledby="editShift" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="editShift">Edit shit</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card-body">
+                    <form [formGroup]="form" class="row g-3" (ngSubmit)="saveShift()">
+                        <div class="col-md">
+                            <label for="initialShift" class="form-label">Initial Shift
+                            </label>
+                            <input type="time" formControlName="initialShift" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && hasError('initialShift') }" />
+                            <div class="invalid-feedback"
+                                *ngIf="hasError('initialShift') && hasError('initialShift')?.['required']">
+                                Field is required
+                            </div>
+                        </div>
+
+
+                        <div class="col-md">
+                            <label for="finalShift" class="form-label">Final Shift
+                            </label>
+                            <input type="time" formControlName="finalShift" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && hasError('finalShift') }" />
+                            <div class="invalid-feedback"
+                                *ngIf="hasError('finalShift') && hasError('finalShift')?.['required']">
+                                Field is required
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" (click)="saveShift()">Save</button>
+                <button type="submit" class="btn btn-danger" data-bs-dismiss="modal"
+                    (click)="onCancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

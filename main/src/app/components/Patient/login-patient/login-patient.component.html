@@ -1,0 +1,46 @@
+<div class="container mt-5 sos">
+    <div class="row">
+        <div class="col"> <img src="../assets/background/login.jpg" class="img-fluid" id="login-doctor" alt="">
+        </div>
+        <div class="col login-form">
+            <div class="d-flex justify-content-center">
+                <div class="brand_logo_container">
+                    <img src="../assets/logos/logo_1.png" class="brand_logo rounded-circle" alt="Logo">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center form_container">
+                <form  [formGroup]="form" action="/login" (ngSubmit)="onSubmit()">
+                    <div class="form-group mb-3 ">
+                        <label class="col-form-label">Email</label>
+                        <input [(ngModel)]="LoginPatient.email" type="text" formControlName="email" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+                        <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                            <div *ngIf="f['email'].errors['required']">Email is required</div>
+                            <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="col-form-label">Password</label>
+                        <input [(ngModel)]="LoginPatient.password" name="password" type="password" formControlName="password" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+                        <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                            <div *ngIf="f['password'].errors['required']">Password is required</div>
+                            <div *ngIf="f['password'].errors['minlength']">
+                                Password must be at least 6 characters
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3 login_container">
+                            <div class="col-5">
+                                <button (click)="login()" type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                            <div class="col-9">
+                                <button [routerLink]="['/login-admin']" routerLinkActive="router-link-active" type="submit" class="btn btn-primary">Login as Admin</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,195 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-left">
+                <li class="breadcrumb-item"><a routerLink="home-patient">Home</a></li>
+                <li class="breadcrumb-item active"><a>Profile</a></li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+
+            <!-- Profile Section -->
+            <div class="card card-outline">
+                <div class="card-body box-profile">
+                    <div class="text-center">
+                        <img class="profile-user-img img-circle" src="/assets/patient/patient_11.jpg"
+                            alt="User profile picture">
+                    </div>
+                    <h3 class="profile-username text-center">Jane Doe</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header p-2">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a class="nav-link active" href="#activity"
+                                data-toggle="tab">Appointments</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Settings</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="active tab-pane" id="activity">
+                            <!--appointment section  -->
+                            <app-appointment-table></app-appointment-table>
+                        </div>
+
+                        <div class="tab-pane" id="settings">
+                            <form class="row g-3" [formGroup]="formSettings" (ngSubmit)="onSubmit()">
+                                <div class="col-md-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" formControlName="name" class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && formValidation['name'].errors }"
+                                        placeholder="Jane" />
+                                    <div *ngIf="submitted && formValidation['name'].errors" class="invalid-feedback">
+                                        <div *ngIf="formValidation['name'].errors['required']">Field is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="last-name" class="form-label">Last Name</label>
+                                    <input type="text" formControlName="lastName" class="form-control"
+                                        [ngClass]="{'is-invalid': submitted && formValidation['lastName'].errors}"
+                                        placeholder="Doe">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="cpf" class="form-label">CPF</label>
+                                    <input type="text" formControlName="cpf" class="form-control"
+                                        [ngClass]="{'is-invalid': submitted && formValidation['cpf'].errors}"
+                                        placeholder="000.000.000-00">
+                                    <div *ngIf="submitted && formValidation['cpf'].errors" class="invalid-feedback">
+                                        <div *ngIf="formValidation['cpf'].errors['required']">Field is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="phone-number" class="form-label">Phone Number</label>
+                                    <input type="text" formControlName="phoneNumber" class="form-control"
+                                        [ngClass]="{'is-invalid': submitted && formValidation['phoneNumber'].errors}"
+                                        placeholder="(00) 0000-0000" />
+                                    <div *ngIf="submitted && formValidation['phoneNumber'].errors"
+                                        class="invalid-feedback">
+                                        <div *ngIf="formValidation['phoneNumber'].errors['required']">Field is required
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <label for="professional-select" class="form-label">Sex</label>
+                                    <select id="professional-select" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <label for="birthdate" class="form-label">Birthdate</label>
+                                    <input type="date" class="form-control" id="birthdate" placeholder="00/00/0000">
+                                </div>
+                                <div class="col-4">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="text" formControlName="email" class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && formValidation['email'].errors }"
+                                        placeholder="email@email.com" />
+                                    <div *ngIf="submitted && formValidation['email'].errors" class="invalid-feedback">
+                                        <div *ngIf="formValidation['email'].errors['required']">Field is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="mother-name" class="form-label">Mother's Name</label>
+                                    <input type="text" formControlName="motherName" class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && formValidation['motherName'].errors }"
+                                        placeholder="Jane's mother" />
+                                    <div *ngIf="submitted && formValidation['motherName'].errors"
+                                        class="invalid-feedback">
+                                        <div *ngIf="formValidation['motherName'].errors['required']">Field is required
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="father-name" class="form-label">Father's Name</label>
+                                    <input type="text" formControlName="fatherName" class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && formValidation['fatherName'].errors }"
+                                        placeholder="Jane's father" />
+                                    <div *ngIf="submitted && formValidation['fatherName'].errors"
+                                        class="invalid-feedback">
+                                        <div *ngIf="formValidation['fatherName'].errors['required']">Field is required
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <label for="cep" class="form-label">CEP</label>
+                                    <input type="text" formControlName="cep" class="form-control"
+                                        [ngClass]="{'is-invalid': submitted && formValidation['cep'].errors}"
+                                        placeholder="00000-000" />
+                                    <div *ngIf="submitted && formValidation['cep'].errors" class="invalid-feedback">
+                                        <div *ngIf="formValidation['cep'].errors['required']">Field is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" formControlName="city" class="form-control"
+                                    [ngClass]="{'is-invalid': submitted && formValidation['cep'].errors}"
+                                    placeholder="City" />
+                                <div *ngIf="submitted && formValidation['city'].errors" class="invalid-feedback">
+                                    <div *ngIf="formValidation['city'].errors['required']">Field is required</div>
+                                </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="street" class="form-label">Street</label>
+                                    <input type="text" formControlName="street" class="form-control"
+                                        [ngClass]="{'is-invalid': submitted && formValidation['street'].errors}"
+                                        placeholder="00000-000" />
+                                    <div *ngIf="submitted && formValidation['street'].errors" class="invalid-feedback">
+                                        <div *ngIf="formValidation['street'].errors['required']">Field is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="number-address" class="form-label">Number</label>
+                                    <input type="text" formControlName="numberAddress" class="form-control"
+                                        [ngClass]="{'is-invalid': submitted && formValidation['numberAddress'].errors}"
+                                        placeholder="000" />
+                                    <div *ngIf="submitted && formValidation['numberAddress'].errors" class="invalid-feedback">
+                                        <div *ngIf="formValidation['numberAddress'].errors['required']">Field is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <label for="professional-select" class="form-label">State</label>
+                                    <select id="professional-select" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>SC</option>
+                                        <option>PR</option>
+                                        <option>RS</option>
+                                    </select>
+                                </div>
+                                <div class="col-2">
+                                    <label for="professional-select" class="form-label">Country</label>
+                                    <select id="professional-select" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>BR</option>
+                                        <option>EUA</option>
+                                        <option>CAN</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Allergies</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                    <button type="button" class="btn btn-danger">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-add-appointment-btn></app-add-appointment-btn>
+<app-add-appointment-modal></app-add-appointment-modal>

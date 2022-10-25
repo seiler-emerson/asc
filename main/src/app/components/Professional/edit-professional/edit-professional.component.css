@@ -1,0 +1,9 @@
+.card-body{
+    backdrop-filter: blur(10px) !important;
+}
+
+.btn-primary{
+    background-color: #4488bb !important;
+    border: none;
+  }
+  

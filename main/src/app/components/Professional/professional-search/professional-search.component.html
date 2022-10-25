@@ -1,0 +1,28 @@
+<app-search-professional></app-search-professional>
+
+
+<div class="container-fluid mt-5">
+    <div class="card professional-card">
+        <div class="item card" *ngFor="let professional of professionals">
+            <img src="{{professional.imageUrl}}" class="card-img-top professional" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{professional.name}}</h5>
+                <p class="card-text">{{professional.specialty}}</p>
+
+                <div class="details">
+                    <div class="row">
+                        <div class="col text">
+                            <star-rating [value]="professional.stars" [totalstars]="5"
+                                checkedcolor="#345B70" uncheckedcolor="gray" size="18px" [readonly]="true">
+                            </star-rating>
+                        </div>
+                        <div class="col text-end">
+                            <span class=" btn favorite{{professional.favorite?'':'not'}}"> <i
+                                    class="fa fa-heart"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

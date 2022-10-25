@@ -1,0 +1,15 @@
+.container-fluid{
+    margin-top: 5rem;
+    border:none !important;
+    box-shadow: 5px 10px transparent;
+    
+}
+
+.text-center img{
+    height: 12rem;
+    width: 12rem;
+}
+
+.box-profile{
+    box-shadow: none !important;
+}
